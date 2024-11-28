@@ -131,6 +131,10 @@ namespace Tymakov_lesson_5
             int[] vowConCounters = GetVowConCount(GetTextOfFile("text.txt"));
             Console.WriteLine($"Кол-во гласных букв: {vowConCounters[0]}\nКол-во согласных букв: {vowConCounters[1]}");
 
+
+            //Написать программу, реализующую умножению двух матриц, заданных в
+            //виде двумерного массива.В программе предусмотреть два метода: метод печати матрицы,
+            //метод умножения матриц(на вход две матрицы, возвращаемое значение – матрица).
             Console.WriteLine("\nУпражнение 6.2");
             int[,] multiplayedMatrix = MultiplayMatrixs(GetMatrix2D(2, 2), GetMatrix2D(2, 3));
             if (multiplayedMatrix != null)
