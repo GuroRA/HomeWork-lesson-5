@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35222.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tymakov-lesson-5", "Tymakov-lesson-5\Tymakov-lesson-5.csproj", "{761B2C73-E97D-4EC4-984F-03CFDA2D4962}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "File-leson-5", "File-leson-5\File-leson-5.csproj", "{49BB39A5-B056-484E-8662-61D2FF54E1F1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{761B2C73-E97D-4EC4-984F-03CFDA2D4962}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{761B2C73-E97D-4EC4-984F-03CFDA2D4962}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{761B2C73-E97D-4EC4-984F-03CFDA2D4962}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{761B2C73-E97D-4EC4-984F-03CFDA2D4962}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49BB39A5-B056-484E-8662-61D2FF54E1F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49BB39A5-B056-484E-8662-61D2FF54E1F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49BB39A5-B056-484E-8662-61D2FF54E1F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49BB39A5-B056-484E-8662-61D2FF54E1F1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {47D72182-1D61-446A-AEA7-F43E924D9375}
+	EndGlobalSection
+EndGlobal
