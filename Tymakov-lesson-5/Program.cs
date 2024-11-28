@@ -59,8 +59,10 @@ namespace Tymakov_lesson_5
         /// <returns></returns>
         static List<char> GetTextOfFile(string fileName)
         {
-            using FileStream file = File.OpenRead(fileName);
-            byte[] array = new byte[file.Length];
+            Console.WriteLine("Введите текст в файл: ");
+            string text = Console.ReadLine();
+            using FileStream file = new FileStream(fileName, FileMode.Create);
+            byte[] array = System.Text.Encoding.UTF8.GetBytes(text);
             file.Read(array, 0, array.Length);
 
             char[] chars = System.Text.Encoding.UTF8.GetString(array).ToCharArray();
@@ -76,7 +78,7 @@ namespace Tymakov_lesson_5
         /// <param name="rows"></param>
         /// <param name="cols"></param>
         /// <returns></returns>
-        static int[,] GetMatrix2D(uint rows, uint cols)
+        static int[,] GetMatrix2D(int rows, int cols)
         {
             Random rnd = new Random();
             int[,] matrix = new int[rows, cols];
@@ -136,7 +138,23 @@ namespace Tymakov_lesson_5
             //виде двумерного массива.В программе предусмотреть два метода: метод печати матрицы,
             //метод умножения матриц(на вход две матрицы, возвращаемое значение – матрица).
             Console.WriteLine("\nУпражнение 6.2");
-            int[,] multiplayedMatrix = MultiplayMatrixs(GetMatrix2D(2, 2), GetMatrix2D(2, 3));
+
+            Console.WriteLine("Введите размерности первой и второй матрицы(положительные числа, по одному в столбик): ");
+
+
+            int[,] multiplayedMatrix;
+
+            if (!int.TryParse(Console.ReadLine(), out int n1) || !int.TryParse(Console.ReadLine(), out int m1) || !int.TryParse(Console.ReadLine(), out int n2) || !int.TryParse(Console.ReadLine(), out int m2))
+            {
+                Console.WriteLine("Вы не праильно ввели размерности. Будут переданны 2, 2 и 2, 3");
+                multiplayedMatrix = MultiplayMatrixs(GetMatrix2D(2, 2), GetMatrix2D(2, 3));
+            }
+            else
+            {
+                multiplayedMatrix = MultiplayMatrixs(GetMatrix2D(Math.Abs(n1), Math.Abs(m1)), GetMatrix2D(Math.Abs(n2), Math.Abs(m2)));
+            }
+
+
             if (multiplayedMatrix != null)
             {
                 for (int row = 0; row < multiplayedMatrix.GetLength(0); row++)
